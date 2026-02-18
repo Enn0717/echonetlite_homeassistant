@@ -386,8 +386,10 @@ ENL_OP_CODES = {
                 },
             },  # "Water heating temperature setting",
             0xB4: {
-                CONF_TYPE: SensorDeviceClass.TEMPERATURE,
-                CONF_STATE_CLASS: SensorStateClass.MEASUREMENT,
+                TYPE_NUMBER: {
+                    CONF_MINIMUM: 0,
+                    CONF_MAXIMUM: 0xFF,
+                },
             },  # "Manual water heating stop days setting",
             # 0xB5: , # "Relative time setting value for manual water heating OFF",
             # 0xB6: , # Tank operation mode setting",
